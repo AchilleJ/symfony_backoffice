@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    {% if app.user %}
+        <div class="mb-3">
+            <a href="{{ path('app_logout') }}">Logout</a>
+            <p>
+            	name: {{app.user.name}}
+            </p>
+            <p>
+           		firstname: {{app.user.firstname}}
+            </p>
+            <p>
+            	email: {{app.user.email}}
+            </p>
+
+        </div>
+    {% endif %}
+{% endblock %}
